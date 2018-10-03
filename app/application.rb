@@ -7,8 +7,10 @@ class Application
 
     if req.path.match(/items/)
       item_name = req.path.split(/item/).last
-      item = @@items.find{|i| i.name == item_name} 
+      binding.pry
+      item = @@items.find{|i| i.name == item_name}
       resp.write item.price
+
 
     elsif req.path != "/items"
       resp.write "Route not found"
