@@ -9,6 +9,8 @@ class Application
     else
       resp.write "Path not found."
       resp.status = 404
+    end
+    
     # if requ.path.match(/items/)
     #   item_name = req.path.split(/item/).last
     #   item =
