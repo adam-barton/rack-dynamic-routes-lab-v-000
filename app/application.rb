@@ -6,7 +6,8 @@ class Application
 
     if req.path.match(/items/)
       item_name = req.path.split(/item/).last
-      item = @@items.find{|i| i.name == item_name} 
+        @@items.include?(item_name)
+      # item = @@items.find{|i| i.name == item_name} 
       resp.write item.price
 
     elsif req.path != "/items"
